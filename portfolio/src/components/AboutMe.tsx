@@ -1,4 +1,5 @@
 import  React  from 'react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 const AboutMe: React. FC = () => {
     return (
@@ -24,7 +25,21 @@ const AboutMe: React. FC = () => {
 
             </div>
 
-            
+            {/**Social links */}
+            <div className='flex justify-center lg:justify-start gap-6 mt-5'>
+                <a href="https://github.com/Kavi-Dew-23"
+                className="p-3 rounded-full bg-[#4d77db] bg-opacity-50 hover:bg-[#21C6B6] text-white/70 hover:bg-opacity-20 justify-center opacity-25 transition-colors duration-300">
+                    <Github size={25}/>
+                </a>
+                <a href="www.linkedin.com/in/kavindyadewpura"
+                className="p-3 rounded-full bg-[#4d77db] bg-opacity-50 hover:bg-[#21C6B6] text-white/70 hover:bg-opacity-20 justify-center opacity-25 transition-colors duration-300">
+                    <Linkedin size={25}/>
+                </a>
+                <a href="https://github.com/Kavi-Dew-23"
+                className="p-3 rounded-full bg-[#4d77db] bg-opacity-50 hover:bg-[#21C6B6] text-white/70 hover:bg-opacity-20 justify-center opacity-25 transition-colors duration-300">
+                    <Mail size={25}/>
+                </a>
+            </div>
         </div>
     );
 };
