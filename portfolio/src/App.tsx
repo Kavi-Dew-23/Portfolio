@@ -1,8 +1,14 @@
+import Navbar from "./components/Navbar.tsx";
+import Home from "./Pages/Home.tsx";
+
 function App(){
   return (
     <div>
-      <h1>Portfolio</h1>
+      <Navbar/>
+      <Home/>
     </div>
+      
+
   )
 }
 
