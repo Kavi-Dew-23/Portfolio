@@ -1,8 +1,9 @@
 import  React  from 'react';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 
 const AboutMe: React. FC = () => {
     return (
+        <div className="w-full min-h-screen flex items-center justify-center relative overflow-hidden">
         <div>
             <p className="text-teal-700 mb-5">Hello, I'm</p>
             <h1 className="text-white text-6xl font-bold mb-5">Kavindya <span className="text-teal-700 text-gradient">Dewapura</span></h1>
@@ -40,7 +41,18 @@ const AboutMe: React. FC = () => {
                     <Mail size={25}/>
                 </a>
             </div>
+            {/**Scroll indicator */}
+        <div className="flex items-center mt-10">
+        <a href=""
+        className="flex flex-col items-center gap-2 hover:text-[#21C6B6] text-gray-400">
+            <span className="text-s">Scroll</span>
+            <ArrowDown className="animate-bounce size-6"/>
+        </a>
+    </div>
         </div>
+        
+                
+    </div>
     );
 };
 
