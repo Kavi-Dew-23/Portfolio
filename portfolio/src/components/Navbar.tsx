@@ -2,8 +2,8 @@ import React from "react";
 
 const Navbar: React.FC = () => {
     return (
-        <nav className="fixed top-5 right-5 p-5">
-            <div className="flex gap-6 text-gray-300">
+        <nav className="fixed top-0 right-0 p-6 w-full bg-[#0e1527]/10 backdrop-blur-md z-50 shadow-md">
+            <div className="flex gap-6 text-gray-300 justify-end">
             {/**top bar */}
             <a href="#home" className="no-underline hover:text-teal-500 transition opacity-70">Home</a>
             <a href="#about" className="no-underline hover:text-teal-500 transition opacity-70">About</a>
