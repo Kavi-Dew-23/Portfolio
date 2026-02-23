@@ -3,12 +3,12 @@ import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 
 const AboutMe: React. FC = () => {
     return (
-        <div className="w-full min-h-screen flex items-center justify-center relative overflow-hidden">
-        <div>
+        <section id="about" className="w-full min-h-screen flex items-center justify-center relative overflow-hidden scroll-m-2">
+        <div className="max-w-3xl">
             <p className="text-teal-700 mb-5">Hello, I'm</p>
             <h1 className="text-white text-6xl font-bold mb-5">Kavindya <span className="text-teal-700">Dewapura</span></h1>
-            <h2 className="text-gray-500 text-2xl mb-4 text-opacity-40">Computer Engineer</h2>
-            <p className="text-opacity-20 text-[#f1f5f9] text-justify text-xl mb-8">
+            <h2 className="text-[#5e7d9c] text-2xl mb-4 text-opacity-90">Computer Engineer</h2>
+            <p className="text-opacity-70 text-[#5e7d9c] text-justify text-xl mb-8 font-medium">
                 Fresh Computer Engineering graduate passionate to learn new technologies and willing to accept challenging opportunities.
                 Seeking an opportunity to utilize technical and interpersonal skills while gaining more experience and adding value to the 
                 organization.</p>
@@ -29,21 +29,27 @@ const AboutMe: React. FC = () => {
             {/**Social links */}
             <div className='flex justify-center lg:justify-start gap-6 mt-5'>
                 <a href="https://github.com/Kavi-Dew-23"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-3 rounded-full bg-[#4d77db] bg-opacity-50 hover:bg-[#21C6B6] text-white/70 hover:bg-opacity-20 justify-center opacity-25 transition-colors duration-300">
                     <Github size={25}/>
                 </a>
-                <a href="www.linkedin.com/in/kavindyadewpura"
+                <a href="http://www.linkedin.com/in/kavindyadewpura"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-3 rounded-full bg-[#4d77db] bg-opacity-50 hover:bg-[#21C6B6] text-white/70 hover:bg-opacity-20 justify-center opacity-25 transition-colors duration-300">
                     <Linkedin size={25}/>
                 </a>
-                <a href="https://github.com/Kavi-Dew-23"
+                <a href="mailto:dewapuraka@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-3 rounded-full bg-[#4d77db] bg-opacity-50 hover:bg-[#21C6B6] text-white/70 hover:bg-opacity-20 justify-center opacity-25 transition-colors duration-300">
                     <Mail size={25}/>
                 </a>
             </div>
             {/**Scroll indicator */}
         <div className="flex items-center mt-10">
-        <a href=""
+        <a href="#introduction"
         className="flex flex-col items-center gap-2 hover:text-[#21C6B6] text-gray-400">
             <span className="text-s">Scroll</span>
             <ArrowDown className="animate-bounce size-6"/>
@@ -52,7 +58,7 @@ const AboutMe: React. FC = () => {
         </div>
         
                 
-    </div>
+    </section>
     );
 };
 
