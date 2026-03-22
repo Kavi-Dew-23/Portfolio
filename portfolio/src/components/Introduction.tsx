@@ -3,7 +3,7 @@ import type React from "react";
 
 const Introduction: React. FC = () => {
     return(
-        <section id="introduction" className="w-full py-20 px-20">
+        <section id="introduction" className="w-full py-20 px-20 bg-[#1e2738] bg-opacity-10">
                 {/**Seperate into 2 sections */}
                 <div>
                 <h1 className="text-white text-6xl font-bold mb-5">About <span className="text-teal-700">Me</span> </h1>

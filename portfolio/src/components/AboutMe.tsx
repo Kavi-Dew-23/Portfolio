@@ -52,7 +52,7 @@ const AboutMe: React. FC = () => {
         <a href="#introduction"
         className="flex flex-col items-center gap-2 hover:text-[#21C6B6] text-gray-400">
             <span className="text-s">Scroll</span>
-            <ArrowDown className="animate-bounce size-6"/>
+            <ArrowDown className="animate-pulse size-6"/>
         </a>
     </div>
         </div>

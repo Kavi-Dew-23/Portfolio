@@ -2,6 +2,7 @@ import React from "react";
 import Profile from "../components/Profile";
 import AboutMe from "../components/AboutMe";
 import Introduction from "../components/Introduction";
+import Skills from "../components/Skills";
 
 const Home: React.FC =() => {
     return(
@@ -15,6 +16,7 @@ const Home: React.FC =() => {
         </section>
         {/**Bio section */}
         <Introduction />
+        <Skills />
         </main>
         
     )
