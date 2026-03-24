@@ -1,5 +1,6 @@
 import { Bot, CodeIcon, Database, MonitorCloud, MonitorCog, Wrench } from "lucide-react";
 import type React from "react";
+import { useState } from "react";
 
 const Skills: React. FC = () => {
     const SkillsCategories = [
@@ -40,6 +41,8 @@ const Skills: React. FC = () => {
         }
     ]
 
+    //to set more skills to show 
+    const [showAll, setShowAll] = useState(false);
 
     return (
         <section id="skills" className="w-full py-20 px-20">
@@ -53,7 +56,9 @@ const Skills: React. FC = () => {
 
             {/**Grid for Caeds*/}
             <div className="grid md:grid-cols-2 gap-8">
-                {SkillsCategories.map((category, index) => (
+                {SkillsCategories
+                .slice(0, showAll ? SkillsCategories.length :4)
+                .map((category, index) => (
                     <div
                     key={index}
                     className="bg-[#1e2738] border border-[#1e2738] transition-all duration-300 
@@ -79,10 +84,20 @@ const Skills: React. FC = () => {
                                 </span>
                             ))}
                         </div>
+                        
                     </div>
                 ))}
                 
 
+            </div>
+            <div className="flex justify-center mt-10">
+                <button
+                onClick={() => setShowAll(!showAll)}
+                className="px-6 py-3 rounded-xl bg-teal-600 text-white font-semibold 
+                hover:bg-teal-700 transition-all duration-300"
+                >
+                {showAll ? "Show Less" : "More Skills"}
+                </button>
             </div>
 
             </div>
