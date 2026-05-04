@@ -12,6 +12,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: check docker file path
+        run: |
+          ls -la
+          cat Dockerfile
+
       - name: Debug 
         run: pwd && ls -a
 
