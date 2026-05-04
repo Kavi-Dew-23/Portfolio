@@ -1,4 +1,4 @@
-name: Portfolio Deploy Frontend
+name: Portfolio Deploy Pipeline
 
 on:
   push:
@@ -8,24 +8,17 @@ on:
 jobs:
   build-and-deploy:
     runs-on: self-hosted
+
     steps:
       - uses: actions/checkout@v3
 
-      - name: Install dependencies
-        run: |
-          cd portfolio
-          npm install
-      
-      - name: Build app
+      - name: Build Docker image
         working-directory: portfolio
         run: |
-          npm install
-          npm run build
+          docker build -t portfolio:latest ./portfolio
       
-      - name: Deploy (local WSL)
-        run: |
-          git pull origin main
-          docker build -t portfolio:latest .
+      - name: Deploy (local WSL) the container
+        run: |      
           docker stop portfolio_c1 || true
           docker rm portfolio_c1 || true
           docker run -d --restart always --name portfolio_c1 -p 4000:80 portfolio:latest
