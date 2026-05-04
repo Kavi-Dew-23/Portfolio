@@ -17,8 +17,9 @@ jobs:
           npm install
       
       - name: Build app
+        working-directory: portfolio
         run: |
-          cd portfolio
+          npm install
           npm run build
       
       - name: Deploy (local WSL)
