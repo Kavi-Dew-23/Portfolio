@@ -6,7 +6,7 @@ const AboutMe: React. FC = () => {
         <section id="about" className="w-full min-h-screen flex items-center justify-center relative overflow-hidden scroll-m-2">
         <div className="max-w-3xl">
             <p className="text-teal-700 mb-5">Hello, I'm</p>
-            <h1 className="text-white text-6xl font-bold mb-5">Kavindya <span className="text-teal-700">Dewapura</span></h1>
+            <h1 className="text-white text-6xl font-bold mb-5">Kavindya -yyy <span className="text-teal-700">Dewapura</span></h1>
             <h2 className="text-[#5e7d9c] text-2xl mb-4 text-opacity-90">Computer Engineer</h2>
             <p className="text-opacity-70 text-[#5e7d9c] text-justify text-xl mb-8 font-medium">
                 Fresh Computer Engineering graduate passionate to learn new technologies and willing to accept challenging opportunities.
