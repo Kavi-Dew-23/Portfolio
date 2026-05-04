@@ -12,10 +12,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Debug 
+        run: pwd && ls -a
+
       - name: Build Docker image
-        working-directory: portfolio
-        run: |
-          docker build -t portfolio:latest ./portfolio
+        run: docker build -t portfolio:latest .
       
       - name: Deploy (local WSL) the container
         run: |      
