@@ -54,7 +54,7 @@ const Skills: React. FC = () => {
             {/**Horizontal line */}
             <div className="w-48 h-2 mb-12 bg-gradient-to-r from-teal-700 to-transparent"></div>
 
-            {/**Grid for Caeds*/}
+            {/**Grid for Cards*/}
             <div className="grid md:grid-cols-2 gap-8">
                 {SkillsCategories
                 .slice(0, showAll ? SkillsCategories.length :4)

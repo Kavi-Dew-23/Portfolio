@@ -48,7 +48,7 @@ const MyServices: React. FC = () => {
 
                         {/**Bullets feature points */}
                         <ul className="grid grid-cols-2 gap-2">
-                            {category.features.map((feature) => (
+                            {category.features?.map((feature) => (
                                 <li
                                 key={feature}
                                 className="flex items-center gap-2 text-base text-[#5e7d9c]">
