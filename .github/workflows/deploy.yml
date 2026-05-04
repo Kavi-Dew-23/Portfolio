@@ -1,0 +1,31 @@
+name: Portfolio Deploy Frontend
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: |
+          cd portfolio
+          npm Install
+      
+      - name: Build app
+        run: |
+          cd portfolio
+          npm run build
+      
+      - name: Deploy (local WSL)
+        run: |
+          cd /home/node2/Portfolio/portfolio
+          git pull origin main
+          docker build -t portfolio:latest .
+          docker stop portfolio_c1 || true
+          docker rm portfolio_c1 || true
+          docker run -d --restart always --name portfolio_c1 -p 4000:80 portfolio:latest
