@@ -24,7 +24,6 @@ jobs:
       
       - name: Deploy (local WSL)
         run: |
-          cd /home/node2/Portfolio/portfolio
           git pull origin main
           docker build -t portfolio:latest .
           docker stop portfolio_c1 || true
